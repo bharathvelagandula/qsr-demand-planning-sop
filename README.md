@@ -64,6 +64,5 @@ It is not intended as a live daily ordering tool, but as a structured example of
 ### Multiple Inputs of Demand
 ![Multiple Inputs](Multiple%20Inputs%20of%20demand.png)
 
-### evaluation of Forecast
-![evaluation of Forecast](evaluation%20of%20forecast.png)
-
+### Evaluation of Forecast
+![Evaluation of Forecast](evaluation%20of%20forecast.png)
