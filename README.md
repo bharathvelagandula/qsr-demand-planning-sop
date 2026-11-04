@@ -56,14 +56,13 @@ It is not intended as a live daily ordering tool, but as a structured example of
 ## Project Screenshots
 
 ### Executive Dashboard
-![Dashboard](dashboard.png)
+![Dashboard](Dashboard.png)
 
 ### Forecast Accuracy Tracker
-![Forecast Accuracy](Forecast-Accurcay.png)
+![Forecast Accuracy](Forecast%20Accuracy.png)
 
-### Demand Plan & Override Log
-![Multiple Inputs of Demand](Multiple-Inputs-of-Demand-log.png)
+### Multiple Inputs of Demand
+![Multiple Inputs](Multiple%20Inputs%20of%20demand.png)
 
-### evaluation of forecast
-![evaluation of forecast](evaluation-of-forecast.png)
-
+### Evaluation of Forecast
+![Evaluation of Forecast](evaluation%20of%20forecast.png)
