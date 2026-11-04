@@ -52,3 +52,18 @@ It is not intended as a live daily ordering tool, but as a structured example of
 1. Start with the **Executive Dashboard** for high-level results
 2. Review the **Demand Planning Model** sheet for daily forecasts and override reasons
 3. Check the historical and exception logs for data context
+
+## Project Screenshots
+
+### Executive Dashboard
+![Dashboard](dashboard.png)
+
+### Forecast Accuracy Tracker
+![Forecast Accuracy](Forecast-Accurcay.png)
+
+### Demand Plan & Override Log
+![Multiple Inputs of Demand](Multiple-Inputs-of-Demand-log.png)
+
+### evaluation of forecast
+![evaluation of forecast](evaluation-of-forecast.png)
+
