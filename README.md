@@ -66,3 +66,4 @@ It is not intended as a live daily ordering tool, but as a structured example of
 
 ### Evaluation of Forecast
 ![Evaluation of Forecast](evaluation%20of%20forecast.png)
+
