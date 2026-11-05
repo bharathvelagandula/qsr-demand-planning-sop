@@ -1,57 +1,34 @@
-# QSR Demand Planning & Consensus S&OP
+# QSR Demand Planning & S&OP Consensus Model
 
-A demonstration project focused on **best practices in S&OP Demand Management** for a Quick Service Restaurant (QSR).
+### Project Overview & Objective
+This project demonstrates an end-to-end Sales and Operations Planning (S&OP) cycle for a Quick Service Restaurant (QSR) facing highly volatile daily demand. By bridging standard time-series forecasting with **human-in-the-loop market intelligence**, this model proves how qualitative consensus overrides can correct algorithmic blind spots to accurately predict daily inventory needs. 
 
-This project shows how to combine a statistical forecasting baseline with structured market intelligence overrides to create a more accurate consensus demand plan.
+The hybrid consensus approach successfully reduced out-of-sample forecast error (MAPE) by over **43%**, highlighting the critical value of business acumen in supply chain execution.
 
-## Project Focus
-- Hybrid demand planning (Statistical + Judgment)
-- Consensus S&OP process
-- Out-of-sample forecast accuracy evaluation
-- Documented override logic based on real operational drivers
+###  The Business Challenge
+The QSR is located adjacent to a major movie theater and local festival grounds, making its foot traffic highly sensitive to localized external shocks:
+1. **Theatrical Releases & Local Events:** Blockbuster premieres and local gatherings (e.g., food fests, town galas) create irregular demand spikes.
+2. **Extreme Weather:** Regional snowstorms and heavy rainfall cause severe, immediate drop-offs in customer volume.
 
-## Key Approach
-1. **Statistical Baseline**  
-   7-day seasonal Holt-Winters (ETS) model trained on historical POS data.
+A standard seasonal time-series algorithm cannot predict these external shocks, leading to costly inventory stockouts on movie weekends and high food waste during severe weather.
 
-2. **Consensus Overrides**  
-   Planner adjustments based on market intelligence such as:
-   - Weather conditions
-   - Local events and festivals
-   - Movie releases and external demand drivers
-   - Operational factors (outages, disruptions)
+###  The Solution & Methodology
+I built a multi-stage forecasting tool in Excel to clean historical data, project a statistical baseline, and actively adjust for external drivers using S&OP principles:
 
-3. **Performance Measurement**  
-   47-day out-of-sample backtest comparing pure statistical forecast vs final consensus plan.
+1. **Data Hygiene & Outlier Cleansing (Z-Score):** Analyzed 731 days of raw POS transaction data, utilizing Z-scores to identify and quarantine historical anomalies (e.g., winter storm closures, state of emergency days) in a dedicated Exception Log.
+2. **Statistical Baseline (Holt-Winters / ETS):** Generated a pure algorithmic forecast trained on 365 days of cleansed history (`FORECAST.ETS`) to capture the underlying 7-day weekly seasonality and general sales trends.
+3. **Consensus S&OP Overrides:** Created an interactive 47-day forecasting dashboard where supply chain planners can log upcoming weather forecasts, movie schedules, and local events to apply percentage-based judgmental overrides to the statistical baseline.
 
-## Results Summary
-| Metric                        | Value      |
-|------------------------------|------------|
-| Evaluation Period            | 47 days    |
-| Total Actual Volume          | 14,665 units |
-| Baseline (ETS) MAPE          | 17.01%     |
-| Consensus Plan MAPE          | 9.60%      |
-| Relative Error Reduction     | ~43.6%     |
+###  Key Results & ROI (47-Day Backtest)
+The model was tested on a 47-day out-of-sample horizon (Jul 20, 2026 – Sep 4, 2026) managing over $107,000 in revenue:
+* **Algorithm-Only Error (Unadjusted ETS):** 17.0% MAPE (48.4 units of error/day)
+* **Consensus Adjusted Error (Final S&OP Forecast):** **9.6% MAPE** (27.6 units of error/day)
+* **Business Impact:** Eliminated nearly 21 units of daily inventory forecasting error, raising overall forecast accuracy to **90.4%**.
 
-## What’s Included
-- Executive Dashboard
-- Daily Demand Planning & Override Log
-- Historical Baseline + Exception Log
-- 2-Year Raw POS History
-
-## Purpose
-This is a **portfolio / demonstration project** designed to showcase practical understanding of:
-- Demand forecasting fundamentals
-- Consensus S&OP process
-- Override documentation discipline
-- Forecast accuracy measurement
-
-It is not intended as a live daily ordering tool, but as a structured example of S&OP demand management best practices.
-
-## How to Review
-1. Start with the **Executive Dashboard** for high-level results
-2. Review the **Demand Planning Model** sheet for daily forecasts and override reasons
-3. Check the historical and exception logs for data context
+###  Tools & Skills Demonstrated
+* **Advanced Excel:** `FORECAST.ETS`, Z-Score formulation, statistical standard deviation, dynamic arrays, and dashboard design.
+* **Supply Chain Concepts:** Demand Planning, Sales and Operations Planning (S&OP), Outlier Cleansing, Judgmental Forecasting / Consensus Overrides, and Mean Absolute Percentage Error (MAPE) tracking.
+* **Data Analytics:** Time-series smoothing, exception logging, and out-of-sample forecast backtesting.
 
 ## Project Screenshots
 
